@@ -34,6 +34,7 @@
             linkLabel1 = new LinkLabel();
             textBox2 = new TextBox();
             label1 = new Label();
+            textBox1 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -73,8 +74,10 @@
             // 
             // linkLabel1
             // 
+            linkLabel1.ActiveLinkColor = SystemColors.Highlight;
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(544, 399);
+            linkLabel1.LinkColor = Color.FromArgb(238, 26, 7);
+            linkLabel1.Location = new Point(533, 387);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(90, 25);
             linkLabel1.TabIndex = 2;
@@ -87,7 +90,7 @@
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox2.ForeColor = Color.FromArgb(238, 26, 7);
-            textBox2.Location = new Point(413, 123);
+            textBox2.Location = new Point(413, 137);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(322, 30);
             textBox2.TabIndex = 4;
@@ -105,12 +108,25 @@
             label1.Text = "Login";
             label1.Click += label1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.WhiteSmoke;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.ForeColor = Color.FromArgb(238, 26, 7);
+            textBox1.Location = new Point(413, 244);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(322, 30);
+            textBox1.TabIndex = 6;
+            textBox1.Text = "Senha";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(linkLabel1);
@@ -118,7 +134,6 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
-            Opacity = 0.85D;
             Text = "Form1";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -134,5 +149,6 @@
         private LinkLabel linkLabel1;
         private TextBox textBox2;
         private Label label1;
+        private TextBox textBox1;
     }
 }
