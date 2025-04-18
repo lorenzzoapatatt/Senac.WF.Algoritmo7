@@ -35,6 +35,7 @@
             textBox2 = new TextBox();
             label1 = new Label();
             textBox1 = new TextBox();
+            button3 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -58,18 +59,18 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(238, 26, 7);
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(507, 350);
+            button1.Location = new Point(489, 350);
             button1.Name = "button1";
-            button1.Size = new Size(146, 34);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Size = new Size(159, 34);
+            button1.TabIndex = 3;
+            button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
@@ -77,12 +78,12 @@
             linkLabel1.ActiveLinkColor = SystemColors.Highlight;
             linkLabel1.AutoSize = true;
             linkLabel1.LinkColor = Color.FromArgb(238, 26, 7);
-            linkLabel1.Location = new Point(533, 387);
+            linkLabel1.Location = new Point(489, 387);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(90, 25);
-            linkLabel1.TabIndex = 2;
+            linkLabel1.Size = new Size(159, 25);
+            linkLabel1.TabIndex = 0;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
+            linkLabel1.Text = "Esqueceu a senha?";
             // 
             // textBox2
             // 
@@ -93,8 +94,10 @@
             textBox2.Location = new Point(413, 137);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(322, 30);
-            textBox2.TabIndex = 4;
+            textBox2.TabIndex = 1;
             textBox2.Text = "Usuário";
+            textBox2.Enter += textBox2_Enter;
+            textBox2.Leave += textBox2_Leave;
             // 
             // label1
             // 
@@ -106,7 +109,6 @@
             label1.Size = new Size(87, 34);
             label1.TabIndex = 5;
             label1.Text = "Login";
-            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -117,8 +119,24 @@
             textBox1.Location = new Point(413, 244);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(322, 30);
-            textBox1.TabIndex = 6;
+            textBox1.TabIndex = 2;
             textBox1.Text = "Senha";
+            textBox1.Enter += textBox1_Enter;
+            textBox1.Leave += textBox1_Leave;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(238, 26, 7);
+            button3.Cursor = Cursors.Hand;
+            button3.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.WhiteSmoke;
+            button3.Location = new Point(752, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(36, 34);
+            button3.TabIndex = 7;
+            button3.Text = "X";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
@@ -126,6 +144,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(textBox2);
@@ -150,5 +169,6 @@
         private TextBox textBox2;
         private Label label1;
         private TextBox textBox1;
+        private Button button3;
     }
 }
